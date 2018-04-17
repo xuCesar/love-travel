@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+html,
+body,
+#app,
+.container {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, '微软雅黑', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  //background: #161616 center center / cover no-repeat;
+}
+.container.extra {
+  * {
+    z-index: 1;
+  }
+}
+.container.extra::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  pointer-events: none;
+  z-index: 0;
+}
